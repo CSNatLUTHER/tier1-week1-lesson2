@@ -22,10 +22,10 @@ let food = "dumplings";
 // 9 - Create a variable called `pets` and set it to the value of the number of pets you have
 let pets = 1;
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-let friendsPets = 3;
+let friendsPets = 5;
 // 11 - Add two pets to your `pets` variable
 pets += 2;
-console.log( "Pets: " + pets)
+console.log( "Pets: " + pets);
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
 const allowedPets = 5
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!", 
@@ -40,10 +40,10 @@ else{
 // 14 - Create a compound conditional: if luckyNumber is 2 and adventurous is true,
 // console log "Roll the dice!"
 if( luckyNumber == 2 && adventurous == "true"){
-    console.log( "Roll the dice!")
+    console.log( "Roll the dice!");
 }
 else{
-    console.log( "Better not risk it!")
+    console.log( "Better not risk it!");
 }
 
 // 15 - Write a conditional that console logs "I can have more pets!" 
@@ -54,13 +54,13 @@ else{
 
 
 if ( pets < allowedPets ){
-    console.log( "I can have more pets!")
+    console.log( "I can have more pets!");
 }
 else if ( pets == allowedPets ){
-   console.log( "I have enough pets.")
+   console.log( "I have enough pets.");
 }
 else {
-    console.log( "Oh no, I have too many pets!")
+    console.log( "Oh no, I have too many pets!");
 }
   
 
@@ -72,8 +72,56 @@ else {
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
 
+let mostPets = 1;
+let friendsName = "Suzzie";
+let winner;
+
+if ( pets > friendsPets) {
+    mostPets = pets;
+    winner = firstName;
+}
+else if ( pets < friendsPets) {
+
+    mostPets = friendsPets;
+    winner = friendsName;
+}
+else {
+    mostPets = pets;
+    winner = "No one"
+}
+
+if ( winner != "No one"){
+    console.log ("if/else: Who has the most pets? " + winner + " has the most pets with " + mostPets + ".");
+}
+else {
+    console.log ("if/else: Who has the most pets? " + winner + " has the most pets. Everyone has " + mostPets + " pets.");
+}
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
+
+
+switch (pets > friendsPets) {
+    case true:
+        mostPets = pets
+        console.log ("switch: Who has the most pets? " + firstName + " has the most pets with " + mostPets + ".");
+        break;
+    case false :
+        if (pets < friendsPets){
+          mostPets = friendsPets  
+          console.log ("switch: Who has the most pets? " + friendsName + " has the most pets with " + mostPets + "."); 
+        }
+        else {
+          mostPets = pets
+          console.log ("switch: Who has the most pets? No one has the most pets. Everyone has " + mostPets + " pets.");  
+        }
+        break;
+    default:
+        console.log ("switch: Cannot determine who has the most pets.");
+
+}
+        // I cannot create a scenerio where the default action executes.
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 
+let adventureOutcome = (adventurous = true) ? "Adventures are great!" : "How about we stay home?";
+    console.log( "Ternary: How do you feel about adventures? " + adventureOutcome );
 
